@@ -12,10 +12,12 @@
   "trailing": true,
   "undef": true,
   "unused": false,
-  "maxlen": 100,
+  "maxlen": 150,
   "strict": true,
   "latedef": false,
   "globals": {
-    "angular": false
+    "angular": false,
+    "Rx": false,
+    "_": false
   }
 }
