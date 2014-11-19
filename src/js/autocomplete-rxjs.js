@@ -59,10 +59,11 @@
 
             return '<li><a href="' +
               c.and_query +
-              '"><span class="value"><strong>' +
+              '"><span class="value">' +
               highlight +
-                '</strong>' +
+                '<strong>' +
                 chopped +
+                '</strong>' +
               '</span><span class="freq">' +
               c.freq +
               '</span></a></li>';
