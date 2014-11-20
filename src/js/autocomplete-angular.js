@@ -82,7 +82,7 @@
 
     $scope
       .$toObservable('vm.userInput')
-      .throttle(300)
+      .throttle(150)
       .map(function(text) {
         return text.newValue;
       })
