@@ -25,7 +25,7 @@
             url: fuseUrl + text,
             dataType: 'json',
             headers: {
-              'x-user-id': '%2268e3325b-a14b-499c-9b7e-fb7830ac3a91%22	'
+              'x-user-id': '%2268e3325b-a14b-499c-9b7e-fb7830ac3a91%22'
             }
           }
         )

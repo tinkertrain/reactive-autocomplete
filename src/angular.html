@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autocomplete: Angular &amp; RxJs</title>
+  <link rel="stylesheet" href="bower_components/foundation/css/normalize.css"/>
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body ng-app="app" ng-strict-di>
+<div class="row">
+  <div class="columns small-12">
+    <header>
+      <h1>Autocomplete <br/>
+        <small>RxJs &amp; Angular</small>
+      </h1>
+    </header>
+  </div>
+</div>
+<div class="row" ng-controller="mainController as vm">
+  <div class="columns small-6 small-centered">
+    <form class="SearchForm">
+      <div class="row collapse">
+        <div class="small-3 large-2 columns">
+          <label for="UserInput" class="prefix">Type Search</label>
+        </div>
+        <div class="small-9 large-10 columns">
+          <input type="search" id="UserInput" ng-model="vm.userInput"/>
+        </div>
+      </div>
+    </form>
+
+    <ul class="SearchResults" ng-show="vm.results.length > 0">
+        <div ng-repeat="facet in vm.results">
+          <h3>{{ facet.label }}</h3>
+          <li ng-repeat="item in facet.items">
+            <a href="{{ item.and_query }}">
+              <span class="value">
+                <strong>{{ ::item.highlight }}</strong>{{::item.chopped}}
+              </span>
+              <span class="freq">{{ ::item.freq }}</span>
+            </a>
+          </li>
+        </div>
+
+    </ul>
+  </div>
+</div>
+
+<script src="bower_components/lodash/dist/lodash.js"></script>
+<script src="bower_components/rxjs/dist/rx.all.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-rx/dist/rx.angular.js"></script>
+<script src="js/autocomplete-angular.js"></script>
+</body>
+</html>
