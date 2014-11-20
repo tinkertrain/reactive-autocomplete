@@ -30,7 +30,7 @@
       </div>
     </form>
 
-    <ul class="SearchResults" ng-show="vm.results.length > 0">
+    <ul class="SearchResults" ng-show="vm.results.length > 0" ng-cloak>
         <div ng-repeat="facet in vm.results">
           <h3>{{ facet.label }}</h3>
           <li ng-repeat="item in facet.items">
