@@ -40,6 +40,7 @@ header {
   }
   a {
     padding: 5px;
+    letter-spacing: 1px;
     color: #444;
     display: block;
     overflow: hidden;
@@ -47,8 +48,9 @@ header {
       background-color: #ddd;
     }
   }
-  span {
-    vertical-align: middle;
+  span,
+  strong {
+    vertical-align: bottom;
   }
   .value {
     float: left;
