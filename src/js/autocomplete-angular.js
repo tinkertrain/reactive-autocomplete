@@ -42,7 +42,7 @@
 
         return rx.Observable
           .fromPromise(deferred.promise)
-          .retry(10) // Retry 10 times then give up
+          .retry(10)
           .map(function(response) {
             return response.data.items;
           });

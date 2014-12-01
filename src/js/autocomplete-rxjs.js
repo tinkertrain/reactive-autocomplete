@@ -11,9 +11,6 @@
     .select(function(e) {
       return e.target.value;
     })
-    //.where(function(text) {
-    //  return text.length > 0;
-    //})
     .throttle(150)
     .distinctUntilChanged();
 
