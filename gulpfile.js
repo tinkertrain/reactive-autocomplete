@@ -37,16 +37,26 @@ gulp.task('browser-sync', function() {
   });
 });
 
+//•• React
+
+gulp.task('jsx', function () {
+  return gulp.src('./src/js/autocomplete-react.jsx')
+    .pipe(plugins.react({harmony: true}))
+    .pipe(gulp.dest('./src/js'));
+});
 
 
 //•• Default task
 
 gulp.task('default', [
   'sass',
-  'browser-sync'
+  'browser-sync',
+  'jsx'
   ], function () {
 
   gulp.watch('./src/sass/**/*.scss', ['sass']);
+
+  gulp.watch('./src/js/**/*.jsx', ['jsx']);
 
 });
 
